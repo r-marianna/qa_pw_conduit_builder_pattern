@@ -8,7 +8,7 @@ export class ArticleDirector {
   buildArticle() {
     this.builder.setTitle();
     this.builder.setDescription();
-    this.builder.setText();
+    this.builder.setBody();
     this.builder.setTags();
 
     const article = this.builder.getProduct();
@@ -19,7 +19,7 @@ export class ArticleDirector {
   buildWithEmptyTitle() {
     this.builder.setTitle('');
     this.builder.setDescription();
-    this.builder.setText();
+    this.builder.setBody();
     this.builder.setTags();
 
     const article = this.builder.getProduct();
@@ -30,7 +30,7 @@ export class ArticleDirector {
   buildWithEmptyDescription() {
     this.builder.setTitle();
     this.builder.setDescription('');
-    this.builder.setText();
+    this.builder.setBody();
     this.builder.setTags();
 
     const article = this.builder.getProduct();
@@ -41,7 +41,7 @@ export class ArticleDirector {
   buildWithEmptyBody() {
     this.builder.setTitle();
     this.builder.setDescription();
-    this.builder.setText('');
+    this.builder.setBody('');
     this.builder.setTags();
 
     const article = this.builder.getProduct();
@@ -52,8 +52,19 @@ export class ArticleDirector {
   buildWithEmptyTags() {
     this.builder.setTitle();
     this.builder.setDescription();
-    this.builder.setText();
+    this.builder.setBody();
     this.builder.setTags(0, '');
+
+    const article = this.builder.getProduct();
+
+    return article
+  }
+
+  buildWithOneTag() {
+    this.builder.setTitle();
+    this.builder.setDescription();
+    this.builder.setBody();
+    this.builder.setTags(1);
 
     const article = this.builder.getProduct();
 

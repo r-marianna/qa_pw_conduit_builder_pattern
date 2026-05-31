@@ -5,7 +5,7 @@ export class Article {
   constructor() {
     this.title = null;
     this.description = null;
-    this.text = null;
+    this.body = null;
     this.tags = null;
   }
 }
@@ -23,12 +23,12 @@ export class ArticleBuilder extends BaseBuilder {
     this.product.description = description ?? this.generateDescription();
   }
 
-  setText(text = null) {
-    this.product.description = text ?? this.generateText();
+  setBody(text = null) {
+    this.product.body = text ?? this.generateText();
   }
 
   setTags(tagNumber = 0, tags = null) {
-    this.product.description = tags ?? this.generateTags(tagNumber);;
+    this.product.tags = tags ?? this.generateTags(tagNumber);;
   }
 
   generateTitle() {
