@@ -5,6 +5,7 @@ test(`Create article with one tag`, async ({
   articlesApi,
   articleWithOneTag,
 }) => {
+
   const article = articleWithOneTag;
   const response = await articlesApi.createArticle(
     article,

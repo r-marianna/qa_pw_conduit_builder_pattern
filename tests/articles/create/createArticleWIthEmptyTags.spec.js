@@ -5,6 +5,7 @@ test(`Create article with empty tags`, async ({
   articlesApi,
   articleWithoutTags,
 }) => {
+
   const article = articleWithoutTags;
   const response = await articlesApi.createArticle(
     article,
